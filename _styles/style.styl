@@ -20,6 +20,7 @@ header
 	align-items center
 	min-height 90px
 	background-color: $blue;
+	sm(flex-direction, column)
 	&__logo
 		font(40px,CherrySwash,500,#fff)
 		col()
@@ -32,13 +33,18 @@ header
 		md(margin-right, 30px)
 		sm(margin-right, 0px)
 		padding-left 0;
+		xs(margin, 10px 0)
+		xs(justify-content, center)
 		li
+			col-xxs-7()
+			xxs(text-align, center)
 			&:nth-child(2),
 			&:nth-child(3),
 			&:nth-child(4)
 				&:before
 					content "/"
 					font(18px,"Helvetical Cond",100,#fff)
+					xs(display, none)
 			a
 				font(18px,"Helvetical Cond",100,#fff)
 				text-transform uppercase;
@@ -66,20 +72,27 @@ main
 	align-items center
 	justify-content center
 	&__h
+		xxs(max-width, 90%)
+		sm(max-width, 90%)
 		max-width 680px
 		text-align center
 		line-height 49px
 		font(30px,"Helvetical Light",400,$darkblue)
 	&__p
+		xxs(max-width, 90%)
+		sm(max-width, 90%)
 		font(14px,"Helvetical Roman",700,$darkblue)
 		max-width 850px
 		text-align center
 	&__logos
+		sm(max-width, 90%)
+		xxs(max-width, 90%)
 		margin-top 70px;
 		display flex;
 		max-width 800px
 		padding 0
 		li
+			xs(margin, 10px 20px)
 			margin 10px 45px
 
 
@@ -94,6 +107,8 @@ main
 	flex-flow column wrap;
 	&__photo
 		text-align center;
+		.boxPhoto
+			margin-top 20px;
 		.name
 			text-transform uppercase
 			line-height 58px
@@ -101,18 +116,28 @@ main
 			position relative
 			bottom 90px;
 			padding-left 40px;
+			xs(padding-left, 10px)
 			&:after
 				content "	\201D"
 				position absolute
 				font(339px,"Helvetical bold",400,#33d9a1)
 				top 122px
 				left: 12px
+				sm(font-size, 250px)
+				sm(top, 96px)
+				sm(left, 28px)
+				xs(display, none)
 	&__para
+		row-flex()
+		sm(max-width, 90%)
+		sm(margin, 10px auto)
+		col()
 		margin-top 50px;
 		max-width 950px
 		text-align center;
 		line-height 32px;
 		font(18px,"Helvetical Light",400,#fff)
+		xxs(font-size, 16px)
 
 
 .third
@@ -133,19 +158,26 @@ main
 		flex-flow column wrap;
 		justify-content center;
 		align-items center;
+		xs(width, 320px)
+		xs(height, 310px)
+		xxs(border-radius, 30px)
 		input
 			width: 250px;
 			height: 35px;
 			margin 5px 0 5px 0
 			border: 1px solid #c0c0c0;
+			xs(width, 200px)
 			&[type='text']
 				margin-top 50px;
+				xs(margin-top, 40px)
 		textarea
+			xs(width, 200px)
 			border: 1px solid #c0c0c0;
 			margin-top 5px;
 			width: 250px
 			height: 150px;
 			margin-bottom 30px;
+			xs(margin-bottom, 5px)
 		.button
 			cursor: pointer;
 
@@ -162,4 +194,5 @@ footer
 		text-transform uppercase
 		line-height 25px
 		letter-spacing .1rem;
-		font(14px,"Helvetical Light",300,#fff)
+		a
+			font(14px,"Helvetical Light",300,#fff)
