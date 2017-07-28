@@ -7,6 +7,10 @@
 //====================
 // code
 // ===================
+body
+	background-image url('../_img/stardust_@2X.png')
+	background-size: cover;
+	background-repeat: no-repeat;
 
 header
 	flex-grow 0;
@@ -27,6 +31,8 @@ header
 		margin-left 80px;
 		md(margin-left, 30px)
 		sm(margin-left, 0px)
+		&:hover
+			color: #32CCFF
 	&__navBar
 		row-flex()
 		margin-right 80px
@@ -38,6 +44,7 @@ header
 		li
 			col-xxs-7()
 			xxs(text-align, center)
+			transition .3s;
 			&:nth-child(2),
 			&:nth-child(3),
 			&:nth-child(4)
@@ -45,18 +52,26 @@ header
 					content "/"
 					font(18px,"Helvetical Cond",100,#fff)
 					xs(display, none)
+					transition .3s;
+			&:hover
+				&:before
+					color: #32CCFF
 			a
 				font(18px,"Helvetical Cond",100,#fff)
 				text-transform uppercase;
 				line-height 25px
 				padding: 10px 25px
 				md(padding, 10px)
+				transition .3s;
+				&:hover
+					color: #32CCFF
 
 .fotorama
 	display flex;
 	margin 0 auto !important
 	max-width 1200px;
 	position relative
+	background-color: #FFF
 
 main
 	max-width 1280px;
@@ -64,13 +79,14 @@ main
 	flex-grow 1;
 
 .first
+	wrapper()
 	min-height 448px
 	display flex
 	flex-flow column wrap;
-	max-width 1024px;
 	margin 0 auto
 	align-items center
 	justify-content center
+	background-color: #FFF
 	&__h
 		xxs(max-width, 90%)
 		sm(max-width, 90%)
@@ -94,6 +110,7 @@ main
 		li
 			xs(margin, 10px 20px)
 			margin 10px 45px
+			xxs(margin, 10px)
 
 
 .second
@@ -180,6 +197,13 @@ main
 			xs(margin-bottom, 5px)
 		.button
 			cursor: pointer;
+			background: transparent;
+			border: transparent;
+			&:active
+				background: transparent;
+				border: transparent;
+			&:focus
+				outline 0;
 
 footer
 	wrapper()
@@ -196,3 +220,27 @@ footer
 		letter-spacing .1rem;
 		a
 			font(14px,"Helvetical Light",300,#fff)
+
+
+.scrollTop
+	width 40px
+	height 40px
+	background-color: #fff
+	position fixed
+	right 20px
+	bottom -10px
+	transition .5s;
+	opacity .3;
+	cursor pointer
+	border-radius 5px
+	&:after
+		content "X"
+		position absolute
+		top 14%
+		left: 32%
+		color: #000
+		font-size: 24px;
+		font-family PT Sans
+	&:hover
+		bottom 10px
+		opacity: 1

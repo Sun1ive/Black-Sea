@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>My Project</title>
+<title>Black Sea</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,8 +11,8 @@
 <meta name="robots" content="index,follow">
 <link rel="shortcut icon" href="_img/favicon.ico">
 <link rel="stylesheet" href="_libs/normalize.min.css">
-<link rel="stylesheet" href="_styles/style.css">
-<!-- <link rel="stylesheet" href="_styles/style.min.css"> -->
+<!-- <link rel="stylesheet" href="_styles/style.css"> -->
+<link rel="stylesheet" href="_styles/style.min.css">
 <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
 </head>
 <body>
@@ -50,29 +50,30 @@
 
 	<section class="second">
 		<div class="second__photo">
-			<img src="_img/photo.png"><span class="name">Dhavan</span>
-
-			<span class="apper" style="display: none;">&rdquo;</span>
-
+			<div class="boxPhoto">
+				<img src="_img/photo.png">
+				<span class="name">Dhavan</span>
+			</div>
 			<div class="second__para">
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate alias maxime minus ratione nam officia, voluptates, quaerat veritatis laboriosam, suscipit veniam doloremque. Animi quos ullam veniam iste saepe laborum, nesciunt quas rem nemo aspernatur provident maiores similique ipsum temporibus inventore, non. Eligendi at cumque non eos itaque repudiandae enim unde.
 			</div>
 		</div>
 	</section>
+
 	<section class="third">
 		<form id="form">
-			<input type="text" class="name" placeholder=" Name">
-			<input type="email" class="email" placeholder=" Email adress">
+			<input type="text" class="name" placeholder=" Name" required>
+			<input type="email" class="email" placeholder=" Email adress" required>
 			<textarea name="text" placeholder=" Message"></textarea>
-			<div class="button">
-			<img src="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678134-sign-check-64.png">
-			</div>
+			<button class="button"><img src="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678134-sign-check-64.png"></button>
 		</form>
 	</section>
 </main>
 
+<div class="scrollTop"></div>
+
 <footer>
-	<div class="footer">Copyright &copy; Sunlive 2017</div>
+<div class="footer"><a href="#">Copyright &copy; Sunlive 2017</a></div>
 </footer>
 
 
@@ -80,7 +81,6 @@
 
 <script src="_libs/jquery-3.2.1.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
-<!-- <script src="_scripts/common.min.js"></script> -->
 <script src="_scripts/common.js"></script>
 </body>
 </html>
