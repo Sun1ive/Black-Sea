@@ -1,0 +1,59 @@
+@font-face
+	font-family "PT Sans r"
+	src url('../_fonts/PT-Sans-regular.ttf')
+
+@font-face
+	font-family "PT Sans b"
+	src url('../_fonts/PT-Sans-bold.ttf')
+
+@font-face
+	font-family "Helvetical Bold"
+	src url('../_fonts/HelveticaLTStd-Bold.otf')
+
+@font-face
+	font-family "Helvetical Light"
+	src url('../_fonts/HelveticaLTStd-Light.otf')
+
+@font-face
+	font-family "Helvetical Roman"
+	src url('../_fonts/HelveticaLTStd-Roman.otf')
+
+@font-face
+	font-family "Helvetical Cond"
+	src url('../_fonts/HelveticaNeue-Condensed.otf')
+
+@font-face
+	font-family "CherrySwash"
+	src url('../_fonts/CherrySwash-Regular.otf')
+
+//====================
+// mixins
+// ===================
+font($size,$family,$weight,$color)
+	font-size $size
+	font-family $family
+	font-weight $weight
+	color: $color
+//====================
+// variables
+// ===================
+$blue = #4d98a4;
+$green = #00d089;
+$darkblue = #4c505d;
+
+
+//====================
+// global
+// ===================
+body
+	padding 0
+	margin 0
+*
+	box-sizing: border-box
+
+a
+	text-decoration: none
+
+ul
+ol
+	list-style none
